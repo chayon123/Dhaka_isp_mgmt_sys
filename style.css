@@ -80,7 +80,7 @@ div.title1{
 }
 div.lower_body{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     padding:20px;
     /* flex-wrap: wrap; */
@@ -124,12 +124,7 @@ div.btn:hover{
 }
 
 
-div.new_package{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
+
 
 div.footer{
     background-color: rgb(61, 61, 61);
