@@ -6,14 +6,7 @@
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css'>    <!-- semantic-ui cdn -->   <!--bootstrep-->
         <link rel='stylesheet' href='../css/style.css'>
         <style>
-            div.new_package{
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: center;
-                    padding: 20px;
-                    padding-top:0px;
-                }
+
         </style>
     </head>
     <body>
@@ -37,13 +30,14 @@
                 <div class='outer'>
                     <div class='topbar'>
                         <div class='topleft'>
-                        <a class='active' href='index.html'>Home</a>
-                        <a href='usersignup.php'>USER-SIGNUP</a>
-                        <a href='userlogin.php'>USER-LOGIN</a>
+                        <a class='' href='index.html'>My Info</a>
+                        <a href='usersignup.php'>Users & Complain</a>
+                        <!-- <a href='userlogin.php'>USER-LOGIN</a> -->
                         </div>
                         <div class='topright'>
-                        <a href='ispsignup.php'>ISP-SIGNUP</a>
-                        <a href='isplogin.php'>ISP-LOGIN</a>
+                        <!-- <a href='ispsignup.php'>Users & Complain</a>
+                        <a href='isplogin.php'>My info</a> -->
+                        <a href='isplogin.php'>LogOut</a>
                         </div>
                     </div>
 
@@ -97,39 +91,17 @@
                                             <img src='../images/main.png' width=300px hight=300px>
                                         </div>
                                         <div class ='info'>
-                                                        <form id='' class='' action='updatepackage.php' method='get'>
-                                                            <!-- <h3 class=' text-white pt-5'></h3> -->
-                                
-                                                                <label for='First_Name' class=''><b>Pakage Name:</b></label>
-                                                                <br>
-                                                                <input type='text' name='name' id='First_Name' value='$package_name' class='' required>
-                                                                <br>
-
-                                                                <label for='Last_Name' class=''><b>Speed:</b></label> 
-                                                                </br>
-                                                                <input type='text' name='speed' id='Last_Name' value='$packages' class='' required>
-                                                                <br>
-
-                                                                <label for='email' class=''><b>Price:</b></label> 
-                                                                <br>
-                                                                <input type='text' name='cost' id='email' value='$package_cost' placeholder = 'enter your Email' class=''>
-                                                                <br>
-
-                                                                <label for='address' class=''><b>Offer Price:</b></label> 
-                                                                <br>
-                                                                <input type='text' name='offer' id='address' value='$offers' class='' required> 
-                                                                <br>
-
-                                                     
-                                                        
+                                            <h1>$package_name</h2>
+                                            <h2>Speed:&nbsp<span>$packages Mbps</span></h2>
+                                            <h2>price:&nbsp <span>$package_cost tk</span></h2>
+                                            <h2>Offer Price: &nbsp<span>$offers tk</span></h2><br>
                                         </div>
                                         <div class='btn'>
-                                            <button class='ui violet button'><input type='hidden' name='userid' id='Last_Name' value='Update package' class=''>Update Package</button>
+                                            <button class='ui violet button'><a href='temp.php? p_name=$package_name & p_speed=$packages & P_cost=$package_cost & p_offer=$offers'>Update Package</a></button>
                                         </div>
                                         <div class='btn'>
-                                            <button class='ui red button'><a href='deletepackage.php? name=$package_name & speed=$packages & cost=$package_cost & offer=$offers'>Delete Package</a></button>
+                                            <button class='ui red button'><a href='temp.php? p_name=$package_name & p_speed=$packages & P_cost=$package_cost & p_offer=$offers'>Delete Package</a></button>
                                         </div>
-                                        </form>
                                     </div>");
 
                                 }
@@ -139,14 +111,7 @@
 
                     </div>
 
-                    
-
                 </div>
-                <?php
-                    print("<div class='new_package'>
-                            <button class='ui inverted big red button'><a href='addpackage.php'>ADD New Package</a></button>
-                    </div>");
-                ?>
 
                 <div class='footer'>
 
